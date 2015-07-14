@@ -1,0 +1,34 @@
+body {
+	background: #fcaf47;
+	width: 100%;
+	font-family: Roboto, Tahoma, Arial;
+}
+body > section {
+  width: 880px;
+  
+} 
+.choose-product .btn-default {
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.choose-product .btn-default .caret{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  }
+  .form-horizontal .control-label {
+  	text-align: left;
+  }
+  
+  /* css na less */
+  
+  .custom-errors {
+    color: #F2140F;
+    font-weight: 200;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+  }

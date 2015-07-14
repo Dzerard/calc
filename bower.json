@@ -1,0 +1,25 @@
+{
+  "name": "kalkulator",
+  "version": "0.0.0",
+  "authors": [
+    "web01 <web01@make.pl>"
+  ],
+  "description": "kalkulator",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.4",
+    "bootstrap-switch": "~3.3.2",
+    "parsleyjs": "~2.0.7",
+    "less": "~2.5.1",
+    "fontawesome": "~4.3.0"
+  }
+}

@@ -1,0 +1,73 @@
+body {
+  background: #fcaf47;
+  width: 100%;
+  font-family: Roboto, Tahoma, Arial;
+}
+body > section {
+  width: 880px;
+}
+.choose-product .btn-default {
+  background: transparent;
+  border: 1px solid white;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.choose-product .btn-default .caret {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+.choose-product .btn-default .form-horizontal .control-label {
+  text-align: left;
+}
+#productForm .btn.btn-block {
+  border: 0;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: bold;
+  color: white;
+  font-size: 24px;
+}
+#productForm .input-lg {
+  border-radius: 3px;
+  background-color: transparent;
+  color: white;
+}
+#productForm .input-group .input-lg {
+  border-right: 0;
+  box-shadow: none;
+  border-color: white;
+}
+#productForm .input-group .input-group-addon {
+  background-color: transparent;
+  color: white;
+  border-left: 0;
+  font-size: 24px;
+  border-color: white;
+}
+
+.form-control::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  .8;
+}
+.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  .8;
+}
+.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+
+  /* css na less */
+  
+  .custom-errors {
+    color: #F2140F;
+    font-weight: 200;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px 0;
+  }

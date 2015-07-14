@@ -1,0 +1,82 @@
+
+@import "_settings.less";
+
+body {
+	background: #fcaf47;
+	width: 100%;
+	font-family: Roboto, Tahoma, Arial;
+  > section {
+    width: 880px;
+  } 
+} 
+.choose-product {
+  .btn-default {
+    background: transparent;
+    border: 1px solid #fff;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    .caret{
+      position: absolute;
+      right: 10px;
+      top: 15px;
+    }
+    .form-horizontal .control-label {
+      text-align: left;
+    }
+  }
+}
+#productForm {
+  .btn {
+    &.btn-block {
+      border: 0;
+      border-radius: 3px;
+      background-color: @form-button-acitve-color;
+      font-weight: bold;
+      color: @c-white;
+      font-size: @font-size-medium;
+    }    
+  }
+  .input-lg {
+    border-radius: 3px;
+    background-color: transparent;
+    color: @c-white;
+  }
+  .input-group {
+    .input-lg { 
+      border-right: 0;
+      box-shadow: none;
+      border-color: @base;
+    }
+    .input-group-addon {
+      background-color: transparent;
+      color: @c-white;
+      border-left: 0;
+      font-size: @font-size-medium;
+      border-color: @base;
+    }
+  }
+}
+  
+
+::-webkit-input-placeholder {
+   color: fade(@base, 30%);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: fade(@base, 30%);
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: fade(@base, 30%);
+}
+
+:-ms-input-placeholder {  
+   color: fade(@base, 30%); 
+}
+
+/* all */
+::-webkit-input-placeholder { color:#f00; }
+::-moz-placeholder { color:#f00; } /* firefox 19+ */
+:-ms-input-placeholder { color:#f00; } /* ie */
+input:-moz-placeholder { color:#f00; }
