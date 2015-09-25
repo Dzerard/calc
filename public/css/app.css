@@ -22,13 +22,3 @@ body > section {
   .form-horizontal .control-label {
   	text-align: left;
   }
-  
-  /* css na less */
-  
-  .custom-errors {
-    color: #F2140F;
-    font-weight: 200;
-    text-align: center;
-    font-size: 14px;
-    padding: 5px 0;
-  }

@@ -46,28 +46,38 @@ body > section {
   font-size: 24px;
   border-color: white;
 }
+.parsley-errors-list {
+  color: red;
+}
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.3);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.3);
+}
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+/* all */
 
-.form-control::-webkit-input-placeholder { /* WebKit browsers */
-    color:    #fff;
+::-webkit-input-placeholder {
+  color: red;
 }
-.form-control:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #fff;
-   opacity:  .8;
+::-moz-placeholder {
+  color: red;
 }
-.form-control::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #fff;
-   opacity:  .8;
-}
-.form-control:-ms-input-placeholder { /* Internet Explorer 10+ */
-   color:    #fff;
-}
+/* firefox 19+ */
 
-  /* css na less */
-  
-  .custom-errors {
-    color: #F2140F;
-    font-weight: 200;
-    text-align: center;
-    font-size: 14px;
-    padding: 5px 0;
-  }
+:-ms-input-placeholder {
+  color: red;
+}
+/* ie */
+
+input:-moz-placeholder {
+  color: red;
+}
