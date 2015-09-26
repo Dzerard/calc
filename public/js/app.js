@@ -17,11 +17,43 @@ var app = {
 		var _this = this;
 
 		var tempPrice = 0;
-		tempPrice = _this.countItems.val() * _this.selectProduct.val();
+		//ilosc i cena jednostkowa
+	
+		if($('[data-parsley-form-config]').parsley().validate()) {
 
-		console.log(tempPrice);
-		if(!isNaN(tempPrice)) {
-			_this.finalPrice.html('<b>'+tempPrice+_this.currency+'</b>');
+			var width = this.itemWidth.val();
+			var height = this.itemHeight.val();
+			var amount = this.countItems.val();
+			var currentItem = _this.currentItem;
+			var setItemWithPrice = null;
+
+			console.log(currentItem.priceMeter);	//obiekt z informacją o szerokosci i cenie
+			console.log(width);	
+			console.log(height);	
+			console.log(amount);
+
+			for(var i =0; i < currentItem.priceMeter.length; i++) {
+
+				if(width >= currentItem.priceMeter[i].minWidth[0]  && width <= currentItem.priceMeter[i].minWidth[1] ) {
+					setItemWithPrice = currentItem.priceMeter[i];
+					// return;
+				}
+			}
+
+			tempPrice = parseFloat(width*setItemWithPrice.priceCM).toFixed(2);
+
+			if(tempPrice < setItemWithPrice.priceMin) {
+				tempPrice = setItemWithPrice.priceMin;
+			}
+
+			console.log(tempPrice+'zł');
+
+			if(!isNaN(tempPrice)) {
+				_this.finalPrice.html('<b>'+tempPrice+_this.currency+'</b>');
+			}
+
+		} else {
+			console.log('formularz niporawnie wypelniony')
 		}
 
 	},
@@ -31,6 +63,8 @@ var app = {
 		this.finalPrice = this.container.find('.final-price');
 		this.countItems = this.container.find('#countItems');
 		this.dropdown   = this.container.find('.dropdown');
+		this.itemWidth  = this.container.find('#itemWidth');
+		this.itemHeight = this.container.find('#itemHeight');
 		// this.maxAmount  = this.container.find('#maxAmount');
 	},
 	submit: function() {
@@ -64,9 +98,9 @@ var app = {
 		var _this = this;
 
 
+		//akcja do przeliczania formularza
 		this.button.on('click', function() {
 			_this.summary();
-			alert();
 			return false;
 		});
 
@@ -144,9 +178,37 @@ var products  = {
 			3  : 5,
 			10 : 10
 		},
+		'priceMeter': [
+			{
+				'minWidth' : [1,150],
+				'priceMin' : 32,
+				'priceCM'  : 0.8
+			},
+			{
+				'minWidth' : [151,220],
+				'priceMin' : 48,
+				'priceCM'  : 1.2
+			},
+			{
+				'minWidth' : [221,250],
+				'priceMin' : 60,
+				'priceCM'  : 1.2
+			}			
+		],
 		'amount' : 50,
-		'name': 'Karnisz Kwadro'
-	}
+		'name': 'Roleta Termo',
+		'maxWidth': 250
+	},
+	'005' : {
+		'price' : '300',
+		'rabate' : {
+			3  : 5,
+			10 : 10
+		},
+		'amount' : 150,
+		'name': 'Roleta Mini'
+	},
+
 }
 
 

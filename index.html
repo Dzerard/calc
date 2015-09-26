@@ -61,6 +61,7 @@
         </div>      
       </section>
 
+    
       <section id="productList" class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -85,6 +86,16 @@
       <section id="productForm" class="container-fluid">
 
         <div class="form-container">
+
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="final-price"></div>
+
+          </div>
+        </div>
+
+
           <form class="form-horizontal"  data-parsley-form-config>
             <div class="form-group">
 
@@ -101,7 +112,8 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#"  data-product-id="001">Roleta Dzień i Noc</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-product-id="002">Roleta Ścienna /standardowa</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-product-id="003">Roleta Mini</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-product-id="004">Karnisz Kwadro</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-product-id="004">Roleta TERMO</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" data-product-id="005">Karnisz Kwadro</a></li>
                       </ul>                      
                     </div> 
                   </div>
@@ -142,7 +154,7 @@
                   <label for="itemHeight" class="control-label">Długość</label>          
                 </div>
                 <div class="input-group">
-                  <input type="number" min="20" max="99999" class="form-control input-lg" placeholder="Jak wysokie?" aria-describedby="basic-addon-units" required>
+                  <input type="number" id="itemHeight" min="1" max="99999" class="form-control input-lg" placeholder="Jak wysokie?" aria-describedby="basic-addon-units" required>
                   <span class="input-group-addon" id="basic-addon-units">cm</span>
                 </div>
                 <div class="custom-error"></div>
@@ -152,7 +164,7 @@
                   <label for="itemWidth" class="control-label">Szerokość</label>          
                 </div>
                 <div class="input-group">
-                  <input type="number" min="20" max="99999" class="form-control input-lg" placeholder="Jak szerokie?" aria-describedby="basic-addon-units" required>
+                  <input type="number"  id="itemWidth" min="1" max="99999" class="form-control input-lg" placeholder="Jak szerokie?" aria-describedby="basic-addon-units" required>
                   <span class="input-group-addon" id="basic-addon-units">cm</span>
                 </div>
                 <div class="custom-error"></div>
@@ -166,11 +178,7 @@
                 <button class="btn btn-default btn-block btn-lg" type="button">+</button>
               </div>
             </div>             
-          </div>
-
-
-
-          <div class="form-group">
+            <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
               <button type="submit" id="countPriceButton" class="btn btn-success">Przelicz</button>
             </div>
